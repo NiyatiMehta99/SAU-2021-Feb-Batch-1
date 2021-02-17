@@ -129,6 +129,34 @@
 				"description": "The document with the given id is deleted from the bucket"
 			},
 			"response": []
+		},
+		{
+			"name": "http://localhost:8080/movies/city/bangalore",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/movies/city/bangalore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"city",
+						"bangalore"
+					]
+				},
+				"description": "Answer\r\n[\r\n    {\r\n        \"id\": \"B106\",\r\n        \"name\": \"Inception\",\r\n        \"city\": [\r\n            \"mumbai\",\r\n            \"bangalore\"\r\n        ],\r\n        \"tags\": null\r\n    },\r\n    {\r\n        \"id\": \"B107\",\r\n        \"name\": \"Taare zameen par\",\r\n        \"city\": [\r\n            \"gurgaon\",\r\n            \"bangalore\"\r\n        ],\r\n        \"tags\": null\r\n    }\r\n]"
+			},
+			"response": []
 		}
 	]
 }
