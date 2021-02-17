@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "f942d59b-2e67-4de0-b8d7-5a82b3c69a87",
+		"name": "NoSQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/football/moregoals/10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"B110\",\r\n    \"footballer\":\"Neymar\",\r\n    \"goals\":7\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/football/moregoals/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"football",
+						"moregoals",
+						"10"
+					]
+				},
+				"description": "Answer\r\n[\r\n    {\r\n        \"id\": \"B108\",\r\n        \"footballer\": \"Messi\",\r\n        \"goals\": 15\r\n    },\r\n    {\r\n        \"id\": \"B109\",\r\n        \"footballer\": \"Ronaldo\",\r\n        \"goals\": 20\r\n    }\r\n]"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/movies/name/Taare zameen par",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/movies/name/Taare zameen par",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"name",
+						"Taare zameen par"
+					]
+				},
+				"description": "Answer\r\n{\r\n    \"id\": \"B107\",\r\n    \"name\": \"Taare zameen par\",\r\n    \"city\": [\r\n        \"gurgaon\",\r\n        \"bangalore\"\r\n    ],\r\n    \"tags\": null\r\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/movies",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"B112\",\r\n    \"name\": \"3 Idiots\",\r\n    \"city\": [\r\n        \"gurgaon\",\r\n        \"mumbai\"\r\n    ],\r\n    \"tags\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "Answer\r\n{\r\n    \"id\": \"B112\",\r\n    \"name\": \"3 Idiots\",\r\n    \"city\": [\r\n        \"gurgaon\",\r\n        \"mumbai\"\r\n    ],\r\n    \"tags\": null\r\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/movies/B109",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/movies/B109",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"B109"
+					]
+				},
+				"description": "The document with the given id is deleted from the bucket"
+			},
+			"response": []
+		}
+	]
+}
