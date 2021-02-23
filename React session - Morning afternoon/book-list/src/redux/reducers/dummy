@@ -1,0 +1,9 @@
+for (let i = 0; i < books.length; i++) {
+          if (books[i].title.indexOf(action.search)>=0) {
+            //state = books[i];
+            state = [...state,books[i]]
+           // console.log(books[i]+"inside for loop");
+          }
+        }
+        console.log(state);
+        return state
